@@ -1,0 +1,229 @@
+/* Atur gaya umum */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('IMAGES/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: rgb(255, 255, 255);
+    position: relative;
+}
+
+/* Layer transparansi di atas background */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: -1;
+}
+
+/* Atur header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background: linear-gradient(to right, #4e73df, #1cc88a);
+}
+
+/* Penataan untuk bagian kiri (logo dan judul) */
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 24px;
+    color: white;
+    margin: 0;
+}
+
+/* Penataan untuk bagian kanan (navigasi) */
+.header-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.header-right li {
+    margin-left: 30px;
+}
+
+.header-right a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.header-right a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-decoration: underline;
+}
+
+/* Atur area konten utama */
+main {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    color: #333;
+}
+
+/* Formulir dan input */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input {
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Tombol */
+.btn-calculate {
+    background: linear-gradient(45deg, #ff6b6b, #f06595);
+    color: white;
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 20px auto;
+}
+
+.btn-calculate:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.btn-calculate:active {
+    transform: scale(1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Grafik */
+canvas {
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 1200px;
+    color: #333;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Styling soal dan jawaban SNBT */
+#quiz-container .soal, #quiz-container .jawaban {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#quiz-container .soal {
+    font-size: 2rem;
+    color: #2980b9;
+}
+
+#quiz-container .jawaban {
+    font-size: 1.5rem;
+    color: #27ae60;
+}
+
+/* Tombol Submit Answer */
+#quiz-container button#submit {
+    background: linear-gradient(45deg, #f39c12, #e74c3c);
+    color: white;
+    padding: 30px 60px; /* Ukuran padding lebih besar untuk tombol yang lebih besar */
+    font-size: 2.2rem; /* Ukuran font lebih besar untuk tombol */
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 40px auto;
+    width: 80%; /* Membuat tombol lebih lebar */
+    max-width: 500px; /* Mengatur batas lebar tombol */
+}
+
+/* Efek hover pada tombol Submit Answer */
+#quiz-container button#submit:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Efek active pada tombol Submit Answer */
+#quiz-container button#submit:active {
+    transform: scale(1);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling bagian Poin */
+#quiz-container .poin {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #27ae60;
+    margin-top: 20px;
+    text-align: center;
+    background-color: rgba(39, 174, 96, 0.2);
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Efek hover untuk Poin */
+#quiz-container .poin:hover {
+    background-color: rgba(39, 174, 96, 0.3);
+    transform: scale(1.05);
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNBP</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="IMAGES/logo.jpg" alt="Logo" class="logo">
+            <h1>PENGHITUNG NILAI RATA RATA</h1>
+        </div>
+        <nav class="header-right">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="snbt.html">SNBT</a></li>
+                <li><a href="snbp.html">SNBP</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Average Grade Calculator</h2>
+            <form id="calculator">
+                <label for="semester1">Semester 1:</label>
+                <input type="number" id="semester1" required>
+                <label for="semester2">Semester 2:</label>
+                <input type="number" id="semester2" required>
+                <label for="semester3">Semester 3:</label>
+                <input type="number" id="semester3" required>
+                <label for="semester4">Semester 4:</label>
+                <input type="number" id="semester4" required>
+                <label for="semester5">Semester 5:</label>
+                <input type="number" id="semester5" required>
+                <button type="button" id="calculate" class="btn-calculate">Hitung</button>
+
+            </form>
+            <h3>Average Result: <span id="average"></span></h3>
+            <canvas id="chart"></canvas>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 - SNBT & SNBP Information Center</p>
+    </footer>
+    <script src="calculator.js"></script>
+</body>
+</html>
